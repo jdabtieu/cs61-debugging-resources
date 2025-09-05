@@ -1,20 +1,27 @@
 #include <stdio.h>
+#include <vector>
 
 int main() {
+  std::vector<int> nums;
   int x; scanf("%d", &x);
   int y = x;
-  printf("A\n");
-  printf("%d\n", y / x);
+  fprintf(stderr, "before insert\n");
+  nums.push_back(y / x);
+  fprintf(stderr, "inserted 1\n");
   x--;
-  printf("B\n");
-  printf("%d\n", y / x);
+  nums.push_back(y / x);
+  fprintf(stderr, "inserted 2\n");
   x--;
-  printf("C\n");
-  printf("%d\n", y / x);
+  nums.push_back(y / x);
+  fprintf(stderr, "inserted 3\n");
   x--;
-  printf("D\n");
-  printf("%d\n", y / x);
+  nums.push_back(y / x);
+  fprintf(stderr, "inserted 4\n");
   x--;
-  printf("E\n");
-  printf("%d\n", y / x);
+  nums.push_back(y / x);
+  fprintf(stderr, "inserted 5\n");
+  for (int e : nums) {
+    printf("wow we got %d\n", e);
+  }
 }
+
